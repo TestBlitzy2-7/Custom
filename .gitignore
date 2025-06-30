@@ -1,0 +1,294 @@
+# ==================================================
+# .gitignore for Express.js hao-backprop-test project
+# ==================================================
+# This file excludes sensitive files, dependencies, logs, and build artifacts
+# from version control to ensure security and maintain clean repository state.
+#
+# Security: Prevents credential exposure through environment file exclusion
+# Performance: Excludes large dependency directories and generated files
+# Maintainability: Keeps repository focused on source code and configuration
+# ==================================================
+
+# ==========================================
+# ENVIRONMENT VARIABLES & CONFIGURATION
+# ==========================================
+# Exclude environment files to prevent credential exposure per Section 0.3.1
+.env
+.env.*
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.test
+
+# PM2 ecosystem files with sensitive configuration
+# ecosystem.config.js is tracked, but runtime files are excluded
+.pm2/
+pids/
+*.pid
+*.seed
+
+# ==========================================
+# NODE.JS DEPENDENCIES & PACKAGE MANAGEMENT
+# ==========================================
+# Exclude node_modules directory per Node.js best practices
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# NPM cache and temporary files
+.npm
+.eslintcache
+.yarn-integrity
+
+# Package-lock conflicts and backups
+package-lock.json.bak
+yarn.lock.bak
+
+# ==========================================
+# LOGGING & MONITORING FILES
+# ==========================================
+# Winston log files per logging architecture in Section 6.5
+logs/
+*.log
+log/
+
+# PM2 runtime and monitoring files per Section 0.2.2
+.pm2/logs/
+pm2.log*
+pm2-error.log*
+pm2-out.log*
+
+# Application-specific log patterns
+app-*.log
+error-*.log
+access-*.log
+combined-*.log
+
+# Log rotation and compression files
+*.log.gz
+*.log.zip
+*.log.[0-9]*
+
+# ==========================================
+# DEVELOPMENT & BUILD ARTIFACTS
+# ==========================================
+# Build outputs and temporary files
+dist/
+build/
+tmp/
+temp/
+.cache/
+coverage/
+
+# Test artifacts and coverage reports
+test-results/
+test-output/
+.nyc_output/
+coverage/
+*.lcov
+
+# TypeScript compilation outputs (if added later)
+*.tsbuildinfo
+.tscache/
+
+# ==========================================
+# DEVELOPMENT TOOLS & EDITOR FILES
+# ==========================================
+# VS Code settings and workspace files
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# IntelliJ IDEA / WebStorm files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text files
+*.sublime-project
+*.sublime-workspace
+
+# Vim swap and backup files
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs backup files
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom editor files
+.atom/
+
+# ==========================================
+# OPERATING SYSTEM FILES
+# ==========================================
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux system files
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==========================================
+# SECURITY & SENSITIVE FILES
+# ==========================================
+# SSL certificates and private keys
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# SSH keys
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.pub
+
+# GPG keys
+*.gpg
+*.pgp
+
+# JWT secrets and API keys
+secrets/
+.secrets/
+credentials/
+.credentials/
+
+# ==========================================
+# CLOUD & DEPLOYMENT FILES
+# ==========================================
+# AWS credentials and configuration
+.aws/
+aws-credentials.json
+
+# Docker files (if containerization added later)
+.dockerignore.bak
+docker-compose.override.yml
+
+# Kubernetes secrets
+*.yaml.secret
+*.yml.secret
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# ==========================================
+# MONITORING & ANALYTICS
+# ==========================================
+# Application performance monitoring
+newrelic_agent.log
+.newrelic/
+
+# Error tracking and analytics
+.sentry/
+bugsnag/
+
+# Metrics and monitoring data
+metrics/
+stats/
+monitoring/
+
+# ==========================================
+# BACKUP & TEMPORARY FILES
+# ==========================================
+# Database dumps and backups
+*.sql
+*.sqlite
+*.db.backup
+
+# Configuration backups
+*.conf.bak
+*.config.backup
+*.json.bak
+
+# Archive files
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.rar
+*.7z
+
+# Temporary files and directories
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# ==========================================
+# MISCELLANEOUS
+# ==========================================
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Dependency directories
+jspm_packages/
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test/
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ==================================================
+# END OF .gitignore
+# ==================================================
